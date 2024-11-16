@@ -187,21 +187,38 @@
 
         <div class="collapse num4 num5">
 
-            <div class="row m-4 " >
-                <div class="col img-container" id="secret-message">
-                    <img src="images/card.png" class="img-fluid" alt="butler">
-                    <div class="centered" >
-                        <p class="lobster-regular m-0" id="person1">Rachael C</p>
-                        <p class="lobster-regular m-0">You are</p>
-                        <p class="lobster-regular  m-0">Secret Santa for</p>
-                        <p class="lobster-regular  m-0" id="person2">Alanya C</p></div>
+            <div class="row m-4" >
+                <div class="col" id='final-content-pre' style="color:white">
+                    
                 </div>
             </div>
 
-            <div class="row m-4" >
-                <div class="col" id='final-content' style="color:white">
-                    
+            <div class="mb-4">
+                <button href='#' class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".num6" aria-expanded="false" aria-controls="manorApproach" onclick="$('html,body').scrollTop(0);">
+                    Open the card
+                </button>
+            </div>
+
+            <div class="collapse num6 ">
+                
+
+                <div class="row m-4 " >
+                    <div class="col img-container" id="secret-message">
+                        <img src="images/card.png" class="img-fluid" alt="butler">
+                        <div class="centered" >
+                            <p class="lobster-regular m-0" id="person1">Rachael C</p>
+                            <p class="lobster-regular m-0">You are</p>
+                            <p class="lobster-regular  m-0">Secret Santa for</p>
+                            <p class="lobster-regular  m-0" id="person2">Alanya C</p></div>
+                    </div>
                 </div>
+
+                <div class="row m-4" >
+                    <div class="col" id='final-content' style="color:white">
+                        
+                    </div>
+                </div>
+
             </div>
 
 
@@ -318,13 +335,17 @@
                         <p class="lobster-regular  m-0" id="person2">${manchester_peeps[b]}</p></div>`)
                     )
 
-                $('#final-content').append(
+                $('#final-content-pre').append(
                     $(`<p>
                         Charles carefully unwraps the present, his eyes growing wide with wonder and delight. "This is absolutely marvelous!" he exclaims, beaming with joy. "Thank you so much for this wonderful gift. It means the world to me."
                     </p>
                     <p>
                         In return, Charles retrieves a beautifully decorated card from a side table, adorned with festive illustrations and a touch of elegance. With a warm smile, he hands it to you. "Here, I have something for you as well. Please, read it."
-                    </p>
+                    </p>`)
+                )
+
+                $('#final-content').append(
+                    $(`
                     <p>
                         You gently open the card, its cover embellished with ivy and Christmas motifs. As you hold the card, the room fills with the warm glow of the holiday spirit, and you know what you must do.
                     </p>`)
@@ -339,7 +360,7 @@
                         <p class="lobster-regular  m-0" id="person2">is ruined</p></div>`)
                     )
 
-                $('#final-content').append(
+                $('#final-content-pre').append(
                     $(`<p>
                         As Charles carefully unties the ribbon and peels back the festive wrapping paper, his excitement quickly fades. His eyes, once filled with hopeful anticipation, now reflect a deep sense of disappointment. The room seems to grow colder and quieter as the joy drains from his face.
                     </p>
@@ -351,7 +372,7 @@
                     </p>`)
                 )
 
-                $('.num5').append(
+                $('.num6').append(
                     $(`<div class="row m-4" >
                 <div class="col">
                     <img src="images/charles_sad.png" class="img-fluid" alt="Charles">
