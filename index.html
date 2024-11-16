@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/snowstorm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+        background-color:rgb(6, 12, 32);
+        }
+        .lobster-regular {
+        font-family: "Lobster", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: x-large;
+        }
+
+        .img-container {
+        position: relative;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+    </style>
+</head>
+  <body >
+
+    <div class="container-fluid text-center">
+
+        <div class="collapse show num1" id="manorApproach">
+            <div class="row m-4 " >
+                <div class="col">
+                    <img src="images/mansion.png" class="img-fluid" alt="mansion">
+                </div>
+            </div>
+
+            <div class="row m-4" >
+                <div class="col" style="color:white">
+                    <p>
+                        As you arrive at the gates of the old manor house, the biting cold of the winter night sends shivers down your spine. The snow crunches beneath your boots as you make your way up the long, winding driveway. Festive lights adorn the ancient stone pillars, casting a warm, inviting glow against the backdrop of the frosty landscape.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".num1" aria-expanded="false" aria-controls="manorApproach">
+                    Approach the Manor House
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse num1 num2">
+
+            <div class="row m-4 " >
+                <div class="col">
+                    <img src="images/creepy_butler.png" class="img-fluid" alt="butler">
+                </div>
+            </div>
+
+            <div class="row m-4" >
+                <div class="col" style="color:white">
+                    <p>
+                        The door creaks open, revealing a tall, unsettling figure standing in the dimly lit doorway. The butler's gaunt face is lined with age, his deep-set eyes shadowed, and his expression stoic. His attire is immaculate, but there's something almost spectral about his presence that sends a shiver down your spine.
+                    </p>
+                    <p>
+                        However, as he steps forward, a warm smile breaks through his solemn demeanor, and his eyes twinkle with genuine kindness. "Welcome to the estate of Charles the Giraffe," he says, his voice surprisingly gentle and inviting. The contrast between his appearance and his welcoming nature is striking, and you can't help but feel a sense of comfort and reassurance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".num2" aria-expanded="false" aria-controls="manorApproach">
+                    Enter the Manor House
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse num2 num3">
+
+            <div class="row m-4 " >
+                <div class="col">
+                    <img src="images/tree.png" class="img-fluid" alt="butler">
+                </div>
+            </div>
+
+            <div class="row m-4" >
+                <div class="col" style="color:white">
+                    <p>
+                        As you step through the grand entrance of the manor house, the warmth of the interior envelops you instantly, chasing away the winter chill. Your eyes widen in awe as you take in the sight before you: the most enormous Christmas tree you’ve ever seen, adorned with twinkling lights, shimmering ornaments, and a glittering star perched on top. The scent of pine fills the air, mingling with the sweet aroma of freshly baked gingerbread.
+                    </p>
+                    <p>
+                    The butler stands beside the tree with a gentle smile, his eyes twinkling with kindness. He quietly clears his throat and gestures for you to follow him. You reluctantly tear your gaze away from the magnificent tree and follow the butler through the elegantly decorated halls.
+                    </p>
+                    <p>
+                    Each room you pass is filled with festive cheer, from garlands and wreaths to stockings hung by roaring fireplaces. The soft hum of Christmas carols floats through the air, adding to the magical atmosphere.
+                    </p>
+                    <p>
+                    Finally, the butler leads you to the main living room and ushers you in.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".num3" aria-expanded="false" aria-controls="manorApproach">
+                    Step into the living room
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse num3 num4">
+
+
+            <div class="row m-4" >
+                <div class="col">
+                    <img src="images/charles.png" class="img-fluid" alt="Charles">
+                </div>
+            </div>
+
+            <div class="row m-4" >
+                <div class="col" style="color:white">
+                    <p>
+                        You enter the main living room, where a warm fire crackles in the hearth. Seated beside it is none other than Charles the Giraffe, resplendent in his top hat and monocle, holding a cup of tea. He looks up with a welcoming smile, his presence adding an extra layer of charm to the already enchanting setting.
+                    </p>
+                    <p>
+                        "Welcome," Charles says in a deep, soothing voice. "I'm so glad you could join us for Christmas." You feel an overwhelming sense of comfort and joy, knowing you’re in the company of such delightful characters in this wondrous place.
+                    </p>
+                    <p>
+                        As Charles spots the neatly wrapped gift in your hands, his eyes light up with delight. His monocle glints in the firelight as he breaks into a wide, joyful smile, his top hat tilting slightly in his excitement. "Oh my, you've brought a present!" he exclaims, his voice filled with genuine glee.
+                    </p>
+                    <p>
+                        He eagerly leans forward, his long neck craning to get a better look at the gift. "What is it? What have you brought me?" he asks, his curiosity piqued and his excitement palpable.
+                    </p>
+                    <p>
+                        What have you brought Charles?
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-4 btn-group">
+                <div class="col dropup-center dropup ">
+                    <button type="button" id="adjectives-button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                    <ul id="adjectives-dropdown" class="dropdown-menu overflow-auto" style="max-height: 500px;">
+                    </ul>
+                </div>
+
+                <div class="col dropup-center dropup">
+                    <button type="button" id="colors-button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                    <ul id="colors-dropdown" class="dropdown-menu overflow-auto" style="max-height: 500px;">
+                    </ul>
+                </div>
+
+                <div class="col dropup-center dropup">
+                    <button type="button" id="items-button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+                    <ul id="items-dropdown" class="dropdown-menu overflow-auto" style="max-height: 500px;">
+                    </ul>
+                </div>
+
+                
+            </div>
+
+
+            <div class="mb-4">
+                <button disabled id='charles-present-button' class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".num4" aria-expanded="false" aria-controls="manorApproach">
+                    Give Charles his present
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="collapse num4 num5">
+
+            <div class="row m-4 " >
+                <div class="col img-container">
+                    <img src="images/card.png" class="img-fluid" alt="butler">
+                    <div class="centered">
+                        <p class="lobster-regular" id="person1">Rachael C</p>
+                        <p class="lobster-regular">You are Secret Santa for</p>
+                        <p class="lobster-regular" id="person2">Alanya C</p></div>
+                </div>
+            </div>
+
+            <div class="row m-4" >
+                <div class="col" style="color:white">
+                    <p>
+                        Charles carefully unwraps the present, his eyes growing wide with wonder and delight. "This is absolutely marvelous!" he exclaims, beaming with joy. "Thank you so much for this wonderful gift. It means the world to me."
+                    </p>
+                    <p>
+                        In return, Charles retrieves a beautifully decorated card from a side table, adorned with festive illustrations and a touch of elegance. With a warm smile, he hands it to you. "Here, I have something for you as well. Please, read it."
+                    </p>
+                    <p>
+                        You gently open the card, its cover embellished with ivy and Christmas motifs. As you hold the card, the room fills with the warm glow of the holiday spirit, and you know what you must do.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        function cyrb128(str) {
+            let h1 = 1779033703, h2 = 3144134277,
+                h3 = 1013904242, h4 = 2773480762;
+            for (let i = 0, k; i < str.length; i++) {
+                k = str.charCodeAt(i);
+                h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+                h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+                h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+                h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
+            }
+            h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
+            h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
+            h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
+            h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
+            h1 ^= (h2 ^ h3 ^ h4), h2 ^= h1, h3 ^= h1, h4 ^= h1;
+            return [h1>>>0, h2>>>0, h3>>>0, h4>>>0];
+        }
+    
+        function sfc32(a, b, c, d) {
+            return function() {
+                a |= 0; b |= 0; c |= 0; d |= 0;
+                let t = (a + b | 0) + d | 0;
+                d = d + 1 | 0;
+                a = b ^ b >>> 9;
+                b = c + (c << 3) | 0;
+                c = (c << 21 | c >>> 11);
+                c = c + t | 0;
+                return (t >>> 0) / 4294967296;
+            }}
+    </script>
+
+    <script>
+        function test(i,j){
+            adjectives.forEach(adj=>{
+            colors.forEach(col=>{
+                presents.forEach(pres=>{
+                    var seed = cyrb128(`${adj}-${col}-${pres}`);
+                    var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
+                    
+                    var a = Math.round(rand()*(manchester_peeps.length-1))
+                    var b = Math.round(rand()*(manchester_peeps.length-1))
+
+                    if (a==i & b==j){
+                        console.log(manchester_peeps[a],manchester_peeps[b])
+                        console.log(adj,col,pres)
+                    }
+                })
+            })
+        })
+        }
+    </script>
+    <script>
+
+        var adjectives;
+        var colors;
+        var presents;
+
+        const manchester_peeps = [
+            'Rachael C', 'Rachel P', 'Rachel E',
+            'Liam M', 'Gary J', 'Alanya C'
+        ]
+
+        window.my_callback = function(){
+            const adj = $('#adjectives-button').text()
+            const col = $('#colors-button').text()
+            const pres = $('#items-button').text()
+
+            i = adjectives.indexOf(adj)
+            j = colors.indexOf(col)
+            k = presents.indexOf(pres)
+
+            console.log(i,j,k,adj,col,pres)
+
+            if (i===-1 || j===-1 || k===-1){
+                $('#charles-present-button').attr('disabled')
+                return 
+            }
+
+            $('#charles-present-button').removeAttr('disabled')
+            var seed = cyrb128(`${adj}-${col}-${pres}`);
+            var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
+            
+            var a = Math.round(rand()*(manchester_peeps.length-1))
+            var b = Math.round(rand()*(manchester_peeps.length-1))
+
+            $('#person1').text(manchester_peeps[a])
+            $('#person2').text(manchester_peeps[b])
+            return
+
+        }
+
+        fetch('/data/adjectives.txt')
+        .then(response => response.text())
+        .then((data) => {
+            adjectives = data.split("\r\n")
+            adjectives.sort()
+            const dropdown = $("#adjectives-dropdown")
+            adjectives.forEach(function(item){
+                const li = $(`<li><a class="dropdown-item" 
+                    onclick='$("#adjectives-button").text("${item}");my_callback();'
+                    >
+                    ${item}</a></li>`)
+                dropdown.append(li)
+
+            })
+        })
+
+        fetch('/data/colors.txt')
+        .then(response => response.text())
+        .then((data) => {
+            colors = data.split("\r\n")
+            colors.sort()
+            const dropdown = $("#colors-dropdown")
+            colors.forEach(function(item){
+                 const li =$(`<li><a class="dropdown-item" 
+                    onclick='$("#colors-button").text("${item}");my_callback();'
+                    >
+                    ${item}</a></li>`)
+                 dropdown.append(li)
+
+             })
+        })
+
+        fetch('/data/presents.txt')
+        .then(response => response.text())
+        .then((data) => {
+            presents = data.split("\r\n")
+            presents.sort()
+             const dropdown = $("#items-dropdown")
+             presents.forEach(function(item){
+                 const li =$(`<li><a class="dropdown-item" 
+                    onclick='$("#items-button").text("${item}");my_callback();'
+                    >
+                    ${item}</a></li>`)
+                 dropdown.append(li)
+
+             })
+        })
+    </script>
+    
+  </body>
+</html>
