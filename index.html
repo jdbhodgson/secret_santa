@@ -188,9 +188,9 @@
         <div class="collapse num4 num5">
 
             <div class="row m-4 " >
-                <div class="col img-container">
+                <div class="col img-container" id="secret-message">
                     <img src="images/card.png" class="img-fluid" alt="butler">
-                    <div class="centered">
+                    <div class="centered" >
                         <p class="lobster-regular m-0" id="person1">Rachael C</p>
                         <p class="lobster-regular m-0">You are</p>
                         <p class="lobster-regular  m-0">Secret Santa for</p>
@@ -199,16 +199,8 @@
             </div>
 
             <div class="row m-4" >
-                <div class="col" style="color:white">
-                    <p>
-                        Charles carefully unwraps the present, his eyes growing wide with wonder and delight. "This is absolutely marvelous!" he exclaims, beaming with joy. "Thank you so much for this wonderful gift. It means the world to me."
-                    </p>
-                    <p>
-                        In return, Charles retrieves a beautifully decorated card from a side table, adorned with festive illustrations and a touch of elegance. With a warm smile, he hands it to you. "Here, I have something for you as well. Please, read it."
-                    </p>
-                    <p>
-                        You gently open the card, its cover embellished with ivy and Christmas motifs. As you hold the card, the room fills with the warm glow of the holiday spirit, and you know what you must do.
-                    </p>
+                <div class="col" id='final-content' style="color:white">
+                    
                 </div>
             </div>
 
@@ -257,7 +249,7 @@
                 presents.forEach(pres=>{
                     var seed = cyrb128(`${adj}-${col}-${pres}`);
                     var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
-                    
+                   
                     var a = Math.round(rand()*(manchester_peeps.length-1))
                     var b = Math.round(rand()*(manchester_peeps.length-1))
 
@@ -300,12 +292,75 @@
             $('#charles-present-button').removeAttr('disabled')
             var seed = cyrb128(`${adj}-${col}-${pres}`);
             var rand = sfc32(seed[0], seed[1], seed[2], seed[3]);
+
+            
             
             var a = Math.round(rand()*(manchester_peeps.length-1))
             var b = Math.round(rand()*(manchester_peeps.length-1))
 
-            $('#person1').text(manchester_peeps[a])
-            $('#person2').text(manchester_peeps[b])
+            var c = rand()
+
+            $('#secret-message').empty()
+            console.log(c)
+            if (c==0.8011318370699883 ||
+                c==0.8122108643874526 ||
+                c==0.8266076704021543 ||
+                c==0.22861210512928665||
+                c==0.5521212096791714 ||
+                c==0.35916509409435093
+            ){
+                $('#secret-message').append(
+                    $(`<img src="images/card.png" class="img-fluid" alt="butler">
+                    <div class="centered" >
+                        <p class="lobster-regular m-0" id="person1">${manchester_peeps[a]}</p>
+                        <p class="lobster-regular m-0">You are</p>
+                        <p class="lobster-regular  m-0">Secret Santa for</p>
+                        <p class="lobster-regular  m-0" id="person2">${manchester_peeps[b]}</p></div>`)
+                    )
+
+                $('#final-content').append(
+                    $(`<p>
+                        Charles carefully unwraps the present, his eyes growing wide with wonder and delight. "This is absolutely marvelous!" he exclaims, beaming with joy. "Thank you so much for this wonderful gift. It means the world to me."
+                    </p>
+                    <p>
+                        In return, Charles retrieves a beautifully decorated card from a side table, adorned with festive illustrations and a touch of elegance. With a warm smile, he hands it to you. "Here, I have something for you as well. Please, read it."
+                    </p>
+                    <p>
+                        You gently open the card, its cover embellished with ivy and Christmas motifs. As you hold the card, the room fills with the warm glow of the holiday spirit, and you know what you must do.
+                    </p>`)
+                )
+            } else {
+                $('#secret-message').append(
+                    $(`<img src="images/card.png" class="img-fluid" alt="butler">
+                    <div class="centered" >
+                        <p class="lobster-regular m-0" id="person1">My disappointment</p>
+                        <p class="lobster-regular m-0">is immeasurable</p>
+                        <p class="lobster-regular  m-0">and my day</p>
+                        <p class="lobster-regular  m-0" id="person2">is ruined</p></div>`)
+                    )
+
+                $('#final-content').append(
+                    $(`<p>
+                        As Charles carefully unties the ribbon and peels back the festive wrapping paper, his excitement quickly fades. His eyes, once filled with hopeful anticipation, now reflect a deep sense of disappointment. The room seems to grow colder and quieter as the joy drains from his face.
+                    </p>
+                    <p>
+                        Charles remains silent, his long neck drooping slightly as he holds the underwhelming gift. He looks at it for a moment longer, then lets out a sigh that echoes with unspoken sadness. Without uttering a word, he reaches into his pocket and pulls out a card, his hand trembling ever so slightly.
+                    </p>
+                    <p>
+                        With a heavy heart, he extends the card to you, his gaze avoiding yours. The silence hangs thick in the air, the only sound the soft crackling of the fireplace and the distant hum of a Christmas carol. As you take the card from his outstretched hand, you can feel the weight of his disappointment, a stark contrast to the festive atmosphere around you
+                    </p>`)
+                )
+
+                $('.num5').append(
+                    $(`<div class="row m-4" >
+                <div class="col">
+                    <img src="images/charles_sad.png" class="img-fluid" alt="Charles">
+                </div>
+            </div>`)
+                )
+            }
+
+            
             return
 
         }
