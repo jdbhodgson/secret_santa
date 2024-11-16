@@ -306,7 +306,7 @@
 
         }
 
-        fetch('/data/adjectives.txt')
+        fetch('data/adjectives.txt')
         .then(response => response.text())
         .then((data) => {
             adjectives = data.split("\r\n")
@@ -322,7 +322,7 @@
             })
         })
 
-        fetch('/data/colors.txt')
+        fetch('data/colors.txt')
         .then(response => response.text())
         .then((data) => {
             colors = data.split("\r\n")
@@ -338,7 +338,7 @@
              })
         })
 
-        fetch('/data/presents.txt')
+        fetch('data/presents.txt')
         .then(response => response.text())
         .then((data) => {
             presents = data.split("\r\n")
