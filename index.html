@@ -309,7 +309,7 @@
         fetch('data/adjectives.txt')
         .then(response => response.text())
         .then((data) => {
-            adjectives = data.split("\r\n")
+            adjectives = data.split(/\r?\n/)
             adjectives.sort()
             const dropdown = $("#adjectives-dropdown")
             adjectives.forEach(function(item){
@@ -325,7 +325,7 @@
         fetch('data/colors.txt')
         .then(response => response.text())
         .then((data) => {
-            colors = data.split("\r\n")
+            colors = data.split(/\r?\n/)
             colors.sort()
             const dropdown = $("#colors-dropdown")
             colors.forEach(function(item){
@@ -341,7 +341,7 @@
         fetch('data/presents.txt')
         .then(response => response.text())
         .then((data) => {
-            presents = data.split("\r\n")
+            presents = data.split(/\r?\n/)
             presents.sort()
              const dropdown = $("#items-dropdown")
              presents.forEach(function(item){
